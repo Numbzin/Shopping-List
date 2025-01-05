@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="container">
+    <h1>Lista de Compras</h1>
+    <AddItem />
+    <ShoppingList />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-});
+<script setup lang="ts">
+import AddItem from "@/components/AddItem.vue";
+import ShoppingList from "@/components/ShoppingList.vue";
 </script>
+
+<style scoped>
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 190px;
+  text-align: center;
+}
+
+h1 {
+  color: #9b59b6;
+  margin-bottom: 35px;
+}
+</style>
