@@ -18,7 +18,10 @@ import { useStore } from "vuex";
 const store = useStore();
 const currentFilter = computed(() => store.state.currentFilter);
 
-const filterOptions = [
+const filterOptions: {
+  value: "all" | "purchased" | "notPurchased";
+  label: string;
+}[] = [
   { value: "all", label: "Todos" },
   { value: "purchased", label: "Comprados" },
   { value: "notPurchased", label: "Não Comprados" },
